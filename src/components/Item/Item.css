@@ -1,0 +1,10 @@
+.assembly-item {
+  padding: 0.2em 0.5em;
+  box-shadow: 2px 2px 0px rgb(0 0 0 / 50%);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.assembly-item:hover {
+  background-color: #eee70b;
+}
