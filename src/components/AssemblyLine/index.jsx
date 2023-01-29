@@ -2,6 +2,7 @@ import React from "react";
 import Input from "../Input";
 import Stage from "../Stage";
 import './AssemblyLine.css';
+import Divider from "../Divider";
 
 const AssemblyLine = ({stages}) => {
   const onAddItem = item => console.log(item);
@@ -11,6 +12,7 @@ const AssemblyLine = ({stages}) => {
     return (
       <>
         <Input onAddItem={onAddItem}/>
+        <Divider />
         <div className="stages-container">
           <Stages />
         </div>
