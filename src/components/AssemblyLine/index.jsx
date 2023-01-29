@@ -3,19 +3,20 @@ import Input from "../Input";
 import Stage from "../Stage";
 import './AssemblyLine.css';
 import Divider from "../Divider";
+import { StageLineProvider } from '../../contexts/AssemblyContext';
 
 const AssemblyLine = ({stages}) => {
-  const onAddItem = item => console.log(item);
-
-    const Stages = () => stages.map((stage) => <Stage name={stage} />)
+    const Stages = () => stages.map((stage) => <Stage key={stage} name={stage} />)
   
     return (
       <>
-        <Input onAddItem={onAddItem}/>
-        <Divider />
-        <div className="stages-container">
-          <Stages />
-        </div>
+        <StageLineProvider stageNames={stages}>
+          <Input />
+          <Divider />
+          <div className="stages-container">
+            <Stages />
+          </div>
+        </StageLineProvider>
       </>
     );
 }
