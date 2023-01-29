@@ -13,7 +13,7 @@ const Input = ({onAddItem}) => {
   return (
     <div className='item'>
       <div> Add an item:</div>
-      <input type="text" onKeyDown={onEnter}/>
+      <input className='assembly-add-item' type="text" onKeyDown={onEnter}/>
     </div>
   )
 };
