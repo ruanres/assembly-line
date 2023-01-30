@@ -1,6 +1,6 @@
 import React from 'react';
 import './Input.css'
-import { useStageContext } from '../../contexts/AssemblyContext';
+import { useStageContext } from '../../context/AssemblyContext';
 
 
 const Input = () => {

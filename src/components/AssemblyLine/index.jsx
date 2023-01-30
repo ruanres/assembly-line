@@ -3,9 +3,11 @@ import Input from "../Input";
 import Stage from "../Stage";
 import './AssemblyLine.css';
 import Divider from "../Divider";
-import { StageLineProvider } from '../../contexts/AssemblyContext';
+import { StageLineProvider } from '../../context/AssemblyContext';
 
 const AssemblyLine = ({stages}) => {
+    if (!stages) return null;
+
     const Stages = () => stages.map((stage) => <Stage key={stage} name={stage} />)
   
     return (

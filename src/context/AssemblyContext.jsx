@@ -1,19 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-import StageNode from "../Entities/StageNode";
-
-const buildStageMap = (stageNames = []) => {
-  const stageMap = {};
-  let previousStage = null;
-  for (const name of stageNames) {
-    const currentStage = new StageNode(name, null, previousStage);
-    if (previousStage) {
-      previousStage.next = currentStage;
-    }
-    previousStage = currentStage;
-    stageMap[name] = currentStage;
-  }
-  return stageMap;
-}
+import { buildStageMap } from "../utils";
 
 export const StageLineContext = createContext({});
 

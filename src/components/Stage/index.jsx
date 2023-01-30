@@ -1,7 +1,7 @@
 import React from 'react';
 import './Stage.css';
 import Item from '../Item';
-import { useStageContext } from '../../contexts/AssemblyContext';
+import { useStageContext } from '../../context/AssemblyContext';
 
 const Stage = ({name}) => {
   const {getStageItems, moveItemNext, moveItemPrevious} = useStageContext()
