@@ -11,8 +11,8 @@ const Stage = ({name}) => {
     <Item 
       name={item} 
       key={item} 
-      onRightClick={() => moveItemNext(name, item)} 
-      onLeftClick={() => moveItemPrevious(name, item)} />
+      onLeftClick={() => moveItemNext(name, item)} 
+      onRightClick={() => moveItemPrevious(name, item)} />
   );
   
   return (
