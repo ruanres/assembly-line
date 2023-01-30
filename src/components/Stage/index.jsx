@@ -1,17 +1,18 @@
 import React from 'react';
 import './Stage.css';
 import Item from '../Item';
+import { useStageContext } from '../../contexts/AssemblyContext';
 
 const Stage = ({name}) => {
+  const {getStageItems, moveItemNext, moveItemPrevious} = useStageContext()
+  const items = getStageItems(name);
 
-  const items = ['first', 'second', 'third', 'fourth'];
-
-  const Items = () => items.map(name => 
+  const Items = () => items.map(item => 
     <Item 
-      name={name} 
-      key={name} 
-      onRightClick={() => {}} 
-      onLeftClick={() => {}} />
+      name={item} 
+      key={item} 
+      onRightClick={() => moveItemNext(name, item)} 
+      onLeftClick={() => moveItemPrevious(name, item)} />
   );
   
   return (
